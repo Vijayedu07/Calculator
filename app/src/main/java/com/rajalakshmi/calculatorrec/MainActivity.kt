@@ -60,13 +60,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         div.setOnClickListener {
+            var a: Float = 0f
+            var b: Float = 0f
             if(number1.text.isNotEmpty()){
-                a = number1.text.toString().toInt()
+                a = number1.text.toString().toFloat()
             }
             if(number2.text.isNotEmpty()){
-                b = number2.text.toString().toInt()
+                b = number2.text.toString().toFloat()
             }
-            val divresult: Float = (a/b).toFloat()
+            val divresult: Float = (a/b)
             op.setText("$divresult").toString()
 //            Toast.makeText(this, "The result of Addition is $result",Toast.LENGTH_SHORT).show()
         }
